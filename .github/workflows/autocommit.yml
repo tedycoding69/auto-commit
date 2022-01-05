@@ -6,7 +6,7 @@ on:
       - master
 
   schedule:
-    - cron: "*/5 * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+    - cron: "* * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
 
 jobs:
   auto_commit:
@@ -49,4 +49,4 @@ jobs:
         with:
           force: true
           directory: "."
-          github_token: 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
+          github_token: ${{ secrets.GITHUB_TOKEN }}
